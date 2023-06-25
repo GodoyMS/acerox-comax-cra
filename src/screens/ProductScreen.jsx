@@ -64,7 +64,7 @@ const ProductScreen = () => {
           />
         </div>
         <div className="md:col-span-12 grid grid-cols-12 gap-10 items-center ">
-          <div className=" col-span-12 md:col-span-5 order-2  md:order-none ">
+          <div className="  md:col-span-5 order-2  md:order-none ">
             <a
               href="/pdf/CATALOGO ACEROS COMEX SAC.pdf"
               target="_blank"
@@ -74,7 +74,7 @@ const ProductScreen = () => {
               <HiDocumentText className="w-6 h-6" />
             </a>
           </div>
-          <div className="flex justify-end gap-4 items-center md:col-span-7 col-span-12 order-1 md:order-none">
+          <div className="flex justify-end gap-4 items-center md:col-span-7 order-1 md:order-none">
             {currentProduct.images.map((img) => (
               <button key={img.id} onClick={() => setCurrentPhotoId(img.url)}>
                 <img
