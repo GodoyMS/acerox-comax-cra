@@ -25,7 +25,7 @@ const Header = () => {
 
       <nav
         style={{ zIndex: 100 }}
-        className="  px-4 py-4 w-full relative bg-gray-100 dark:bg-gray-900"
+        className="  px-4  w-full relative bg-gray-100 dark:bg-gray-900"
       >
         <div className="max-w-7xl mx-auto py-4 w-full flex justify-between relative  gap-2 lg:gap-10">
           <div className="flex justify-start items-center gap-7">
