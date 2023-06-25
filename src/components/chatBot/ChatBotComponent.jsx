@@ -54,9 +54,9 @@ const Products = () => {
     <>
       {productos && (
         <div style={{ width: "100%" }}>
-          <div className="text-start font-bold">Cursos</div>
+          <div className="text-start font-bold">Productos</div>
           {productos.map((e) => (
-            <div key={e.id} className="flex flex-col mt-2 gap-8 mb-4">
+            <div key={e.id} className="flex flex-col mt-2 py-2 gap-8 mb-4">
               <div className="flex justify-between gap-4 items-center">
                 <td className="">
                   <Link
@@ -69,8 +69,8 @@ const Products = () => {
                 <td>
                   {" "}
                   <Link
-                    className=" text-xs p-3 bg-blue-600 text-white rounded-md text-justify  space-y-0  font-sans  leading-5"
-                    href={`/cursos/${e.id}`}
+                    className=" text-xs p-3 bg-blue-600 hover:bg-blue-700 text-white rounded-md text-justify  space-y-0  font-sans  leading-5"
+                    to={`/productos/${e.id}`}
                   >
                     Ver
                   </Link>

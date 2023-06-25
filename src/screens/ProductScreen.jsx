@@ -67,6 +67,127 @@ const ProductScreen = () => {
         <div className="  md:col-span-7">
           <ProductGallery id={id} product={currentProduct} />
         </div>
+        <div className="md:col-span-12">
+          <div className="flex  w-full justify-center flex-wrap gap-6">
+            {currentProduct.normaTecnica && (
+              <div
+                style={{ minWidth: "250px" }}
+                className="flex flex-col flex-1 gap-4  text-justify bg-gray-300 dark:bg-gray-700 p-3 rounded-md"
+              >
+                <h5 className="font-bold text-base text-gray-700 dark:text-gray-100 ">
+                  Norma Técnica
+                </h5>
+                <p className="text-sm text-gray-600 dark:text-gray-300">
+                  {currentProduct?.normaTecnica}
+                </p>
+              </div>
+            )}
+            {currentProduct.presentacion && (
+              <div
+                style={{ minWidth: "250px" }}
+                className="flex flex-col gap-4 flex-1 text-justify bg-gray-300 dark:bg-gray-700 p-3 rounded-md"
+              >
+                <h5 className="font-bold text-base text-gray-700 dark:text-gray-100 ">
+                  Presentación
+                </h5>
+                <p className="text-sm text-gray-600 dark:text-gray-300">
+                  {currentProduct?.presentacion}
+                </p>
+              </div>
+            )}
+            {currentProduct.usos && (
+              <div
+                style={{ minWidth: "250px" }}
+                className="flex-col flex w-full gap-4 flex-1 text-justify bg-gray-300 dark:bg-gray-700 p-3 rounded-md"
+              >
+                <h5 className="font-bold text-base text-gray-700 dark:text-gray-100 ">
+                  Presentación
+                </h5>
+                <p className="text-sm text-gray-600 dark:text-gray-300">
+                  {currentProduct?.usos}
+                </p>
+              </div>
+            )}
+          </div>
+
+          <div className="mt-10  justify-start ">
+            {(currentProduct.composicionQuimica ||
+              currentProduct.longitudEstandar ||
+              currentProduct.medidasCoberturas ||
+              currentProduct.toleraciasDimensionales) && (
+              <>
+                <h4 className="font-bold w-full text-start text-xl text-gray-700 dark:text-gray-100">
+                  Adicionales
+                </h4>
+                <div>
+                  <div className="flex flex-1 flex-wrap justify-start gap-6">
+                    {currentProduct.composicionQuimica && (
+                      <div className="flex flex-col w-auto gap-4  max-w-xs flex-1 text-justify bg-gray-300 dark:bg-gray-700 p-3 rounded-md">
+                        <h5 className="font-bold text-base text-gray-700 dark:text-gray-100 ">
+                          Composicion Quimica
+                        </h5>
+                        <p className="text-sm text-gray-600 dark:text-gray-300">
+                          {currentProduct?.composicionQuimica && (
+                            <ul>
+                              {currentProduct.composicionQuimica.map((e) => (
+                                <li key={e.id}>{e.name}</li>
+                              ))}
+                            </ul>
+                          )}
+                        </p>
+                      </div>
+                    )}
+                    {currentProduct.longitudEstandar && (
+                      <div className="flex flex-col w-auto gap-4  max-w-xs flex-1 text-justify bg-gray-300 dark:bg-gray-700 p-3 rounded-md">
+                        <h5 className="font-bold text-base text-gray-700 dark:text-gray-100 ">
+                         Longitud estándar
+                        </h5>
+                        {currentProduct?.longitudEstandar && (
+                          <p className="text-sm text-gray-600 dark:text-gray-300">
+                            {currentProduct?.longitudEstandar}
+                          </p>
+                        )}
+                          </div>
+                    
+                    )}
+                    {currentProduct.medidasCoberturas && (
+                      <div className="flex flex-col w-auto gap-4  max-w-xs flex-1 text-justify bg-gray-300 dark:bg-gray-700 p-3 rounded-md">
+                        <h5 className="font-bold text-base text-gray-700 dark:text-gray-100 ">
+                          Medidas de cobertura
+                        </h5>
+                        <p className="text-sm text-gray-600 dark:text-gray-300">
+                          {currentProduct?.medidasCoberturas && (
+                            <ul>
+                              {currentProduct.medidasCoberturas.map((e) => (
+                                <li key={e.id}>{e.name}</li>
+                              ))}
+                            </ul>
+                          )}
+                        </p>
+                      </div>
+                    )}
+                     {currentProduct.toleraciasDimensionales && (
+                      <div className="flex flex-col w-auto gap-4  max-w-xs flex-1 text-justify bg-gray-300 dark:bg-gray-700 p-3 rounded-md">
+                        <h5 className="font-bold text-base text-gray-700 dark:text-gray-100 ">
+                          Tolerancias dimensionales
+                        </h5>
+                        <p className="text-sm text-gray-600 dark:text-gray-300">
+                          {currentProduct?.toleraciasDimensionales && (
+                            <ul>
+                              {currentProduct.toleraciasDimensionales.map((e) => (
+                                <li key={e.id}>{e.name}</li>
+                              ))}
+                            </ul>
+                          )}
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </>
+            )}
+          </div>
+        </div>
       </div>
     </main>
   );

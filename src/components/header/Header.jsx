@@ -65,7 +65,7 @@ const Header = () => {
                       </Link>
                     )}
 
-                    {e.products && isProductsActive && (
+                    {e.products && isProductsActive && (    
                       <div
                         onMouseLeave={() => {
                           if (e.name === navBarRoutes[2].name)
