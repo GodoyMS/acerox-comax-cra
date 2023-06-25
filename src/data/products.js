@@ -26,7 +26,7 @@ export const productos = [
     usos: "Estructuras metálicas, vigas, fabricación de    carrocerías, arquitectura, industria metalmecánica",
     presentacion: "Se comercializa en barras de 6 metros de longitud.    ",
     normaTecnica: "ASTM A36/A36M, ASTM A572/A572M",
-    images: [{ id: 1, url: "/assets/images/vigas/vigasU.png", alt: "Vigas U" }],
+    images: [{ id: 1, url: "/assets/images/vigas/vigasU.jpg", alt: "Vigas U" }],
   },
   {
     id: 3,
@@ -44,7 +44,7 @@ export const productos = [
     images: [
       {
         id: 1,
-        url: "/assets/images/planchas/planchaLaminaCaliente.png",
+        url: "/assets/images/planchas/planchaLaminaCaliente.jpg",
         alt: "Plancha Lamina caliente",
       },
     ],
@@ -65,7 +65,7 @@ export const productos = [
     images: [
       {
         id: 1,
-        url: "/assets/images/planchas/planchaGalvanizada.png",
+        url: "/assets/images/planchas/planchaGalvanizada.jpg",
         alt: "Plancha galvanizada",
       },
     ],
@@ -86,12 +86,12 @@ export const productos = [
     images: [
       {
         id: 1,
-        url: "/assets/images/planchas/planchaLaminadaFrio1.png",
+        url: "/assets/images/planchas/planchaLaminadaFrio1.jpg",
         alt: "Plancha laminada en frio",
       },
       {
         id: 2,
-        url: "/assets/images/planchas/planchaLaminadaFrio2.png",
+        url: "/assets/images/planchas/planchaLaminadaFrio2.jpg",
         alt: "Plancha laminada en frio",
       },
     ],
@@ -111,7 +111,7 @@ export const productos = [
     images: [
       {
         id: 1,
-        url: "/assets/images/planchas/planchaEstriada.png",
+        url: "/assets/images/planchas/planchaEstriada.jpg",
         alt: "Plancha estriada",
       },
     ],
@@ -131,7 +131,7 @@ export const productos = [
     images: [
       {
         id: 1,
-        url: "/assets/images/perfiles/anguloEstructural.png",
+        url: "/assets/images/perfiles/anguloEstructural.jpg",
         alt: "Angulo estructural ASTM",
       },
     ],
@@ -151,7 +151,7 @@ export const productos = [
     images: [
       {
         id: 1,
-        url: "/assets/images/perfiles/platinasLac.png",
+        url: "/assets/images/perfiles/platinasLac.jpg",
         alt: "Platinas Lac",
       },
     ],
@@ -176,7 +176,7 @@ export const productos = [
     images: [
       {
         id: 1,
-        url: "/assets/images/perfiles/barraLisa.png",
+        url: "/assets/images/perfiles/barraLisa.jpg",
         alt: "Barra lisa",
       },
     ],
@@ -227,7 +227,7 @@ export const productos = [
     images: [
       {
         id: 1,
-        url: "/assets/images/atechos/coberturaAluzinc.png",
+        url: "/assets/images/atechos/coberturaAluzinc.jpg",
         alt: "Cobertura Aluzinc",
       },
     ],
@@ -259,12 +259,12 @@ export const productos = [
     images: [
       {
         id: 1,
-        url: "/assets/images/atechos/calaminaOndulada1.png",
+        url: "/assets/images/atechos/calaminaOndulada1.jpg",
         alt: "Calamina ondulada",
       },
       {
         id:2,
-        url: "/assets/images/atechos/calaminaOndulada2.png",
+        url: "/assets/images/atechos/calaminaOndulada2.jpg",
         alt: "Calamina ondulada",
       },
     ],
@@ -286,12 +286,12 @@ export const productos = [
     images: [
       {
         id: 1,
-        url: "/assets/images/otros/codoCedula1.png",
+        url: "/assets/images/otros/codoCedula1.jpg",
         alt: "Codo cedula",
       },
       {
         id: 2,
-        url: "/assets/images/otros/codoCedula2.png",
+        url: "/assets/images/otros/codoCedula2.jpg",
         alt: "Codo cedula",
       },
     ],
@@ -315,12 +315,12 @@ export const productos = [
     images: [
       {
         id: 1,
-        url: "/assets/images/otros/unionUniversal1.png",
+        url: "/assets/images/otros/unionUniversal1.jpg",
         alt: "Union universal",
       },
       {
         id: 2,
-        url: "/assets/images/otros/unionUniversal2.png",
+        url: "/assets/images/otros/unionUniversal2.jpg",
         alt: "Union universal",
       },
     ],
@@ -341,12 +341,12 @@ export const productos = [
     images: [
       {
         id: 1,
-        url: "/assets/images/abrasivos/discos1.png",
+        url: "/assets/images/abrasivos/discos1.jpg",
         alt: "Discos de corte",
       },
       {
         id: 2,
-        url: "/assets/images/abrasivos/discos2.png",
+        url: "/assets/images/abrasivos/discos2.jpg",
         alt: "Discos de corte",
       },
     ],
@@ -367,17 +367,17 @@ export const productos = [
     images: [
       {
         id: 1,
-        url: "/assets/images/abrasivos/electrodos1.png",
+        url: "/assets/images/abrasivos/electrodos1.jpg",
         alt: "Electrodos",
       },
       {
         id: 2,
-        url: "/assets/images/abrasivos/electrodos2.png",
+        url: "/assets/images/abrasivos/electrodos2.jpg",
         alt: "Electrods",
       },
       {
         id: 3,
-        url: "/assets/images/abrasivos/electrodos2.png",
+        url: "/assets/images/abrasivos/electrodos2.jpg",
         alt: "Electrods",
       },
     ],

@@ -17,7 +17,7 @@ const Slide1=()=>{
           muted
           loop
         >
-          <source src="/assets/videos/2.mp4" type="video/mp4" />
+          <source src="/assets/videos/2_1.mp4" type="video/mp4" />
         </video>
         <div className="z-20 absolute inset-0 object-cover w-full h-full  bg-black opacity-40"></div>
         <div className="z-50  items-center justify-center py-20 inset-0 object-cover w-full h-full px-6 md:px-0 flex flex-col ">
