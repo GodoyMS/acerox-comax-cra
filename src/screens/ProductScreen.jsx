@@ -92,16 +92,16 @@ const ProductScreen = () => {
 
         <div className="md:col-span-12">
           <div className="flex  w-full justify-center flex-wrap gap-6">
-            {currentProduct.normaTecnica && (
+          {currentProduct.usos && (
               <div
                 style={{ minWidth: "250px" }}
-                className="flex flex-col flex-1 gap-4  text-justify bg-gray-300 dark:bg-gray-700 p-3 rounded-md"
+                className="flex-col flex w-full gap-4 flex-1 text-justify bg-gray-300 dark:bg-gray-700 p-3 rounded-md"
               >
                 <h5 className="font-bold text-base text-gray-700 dark:text-gray-100 ">
-                  Norma Técnica
+                  Usos
                 </h5>
                 <p className="text-sm text-gray-600 dark:text-gray-300">
-                  {currentProduct?.normaTecnica}
+                  {currentProduct?.usos}
                 </p>
               </div>
             )}
@@ -118,16 +118,17 @@ const ProductScreen = () => {
                 </p>
               </div>
             )}
-            {currentProduct.usos && (
+            
+             {currentProduct.normaTecnica && (
               <div
                 style={{ minWidth: "250px" }}
-                className="flex-col flex w-full gap-4 flex-1 text-justify bg-gray-300 dark:bg-gray-700 p-3 rounded-md"
+                className="flex flex-col flex-1 gap-4  text-justify bg-gray-300 dark:bg-gray-700 p-3 rounded-md"
               >
                 <h5 className="font-bold text-base text-gray-700 dark:text-gray-100 ">
-                  Presentación
+                  Norma Técnica
                 </h5>
                 <p className="text-sm text-gray-600 dark:text-gray-300">
-                  {currentProduct?.usos}
+                  {currentProduct?.normaTecnica}
                 </p>
               </div>
             )}
