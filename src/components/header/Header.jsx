@@ -72,7 +72,7 @@ const Header = () => {
                             setIsProductsActive(false);
                         }}
                         style={{ zIndex: 10 }}
-                        className="absolute flex gap-2 flex-col top-20  left-0 bg-white dark:bg-gray-900 rounded-md "
+                        className="absolute flex gap-2 flex-col top-full mt-4  left-0 bg-white dark:bg-gray-900 rounded-md "
                       >
                         {e.products.map((p) => (
                           <Link

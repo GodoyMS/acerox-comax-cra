@@ -17,11 +17,23 @@ const CardProduct = ({ e }) => {
   };
   return (
     <div className=" p-3 rounded-lg bg-white dark:bg-gray-800">
+      <div className="relative ">
       <img
+      onMouseEnter={()=>setIsDescriptionActive(true)} onMouseLeave={()=>setIsDescriptionActive(false)}
         src={e.images[0].url}
         alt={e.images[0].alt}
         className="w-full  object-cover h-60 rounded-md"
       />
+       {isDescriptionActive && (
+              <div className="absolute shadow-xl mt-4   top-full w-full bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 mb-8 rounded-md p-4">
+              {e.descripcion}
+  
+            </div>
+
+          )}
+
+      </div>
+   
       <div className="flex flex-col justify-center mt-10 ">
         <h4 className="font-bold px-2 mb-3 text-gray-700 dark:text-gray-100 ">
           {e.name}
@@ -29,15 +41,9 @@ const CardProduct = ({ e }) => {
         <hr />
         <span className="text-gray-500 text-xs mt-4 px-2">{e?.header}</span>
         <div className="px-2  my-6 w-full relative">
-          {isDescriptionActive && (
-              <div className="absolute shadow-xl  bottom-full w-full bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 mb-8 rounded-md p-4">
-              {e.descripcion}
-  
-            </div>
-
-          )}
+         
         
-          <Link onMouseEnter={()=>setIsDescriptionActive(true)} onMouseLeave={()=>setIsDescriptionActive(false)} to={`/productos/${e.id}` } className=" text-white bg-primary hover:bg-primaryhover font-bold px-4 py-3 rounded-md flex justify-center w-full ">
+          <Link  to={`/productos/${e.id}` } className=" text-white bg-primary hover:bg-primaryhover font-bold px-4 py-3 rounded-md flex justify-center w-full ">
             Ver Producto
           </Link>
         </div>

@@ -7,7 +7,7 @@ export const navBarRoutes = [
   {
     id: 2,
     name: "Productos",
-    route: "/productos",
+    route: "/categorias/vigas",
     products: categories
   },
   { id: 3, name: "Contacto", route: "/contacto" },
