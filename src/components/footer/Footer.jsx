@@ -1,127 +1,81 @@
 import React from "react";
+import { FaLocationArrow, FaMailBulk, FaMapMarker, FaPhone } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-white ">
-      <div className="mx-auto w-full max-w-screen-xl">
-        <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
-          <div>
-            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase ">
-              Empresa
-            </h2>
-            <ul className="text-gray-500 dark:text-gray-400 font-medium">
-              <li className="mb-4">
-                <a href="#" className=" hover:underline">
-                  Sobre
-                </a>
-              </li>
-              <li className="mb-4">
-                <a href="#" className="hover:underline">
-                  Carreras
-                </a>
-              </li>
-              <li className="mb-4">
-                <a href="#" className="hover:underline">
-                  Brand Center
-                </a>
-              </li>
-              <li className="mb-4">
-                <a href="#" className="hover:underline">
-                  Blog
-                </a>
-              </li>
-            </ul>
+    <footer className="bg-white dark:bg-gray-900">
+      <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+        <div className="md:flex md:justify-between">
+          <div className="mb-6 md:mb-0">
+            <Link to={"/"} className="flex justify-center items-center">
+              <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+                Aceros Comax
+              </span>
+            </Link>
           </div>
-          <div>
-            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase ">
-              Help center
-            </h2>
-            <ul className="text-gray-500 dark:text-gray-400 font-medium">
-              <li className="mb-4">
-                <a href="#" className="hover:underline">
-                  Discord Server
-                </a>
-              </li>
-              <li className="mb-4">
-                <a href="#" className="hover:underline">
-                  Twitter
-                </a>
-              </li>
-              <li className="mb-4">
-                <a href="#" className="hover:underline">
-                  Facebook
-                </a>
-              </li>
-              <li className="mb-4">
-                <a href="#" className="hover:underline">
-                  Contact Us
-                </a>
-              </li>
-            </ul>
+          <div className="grid grid-cols-1 gap-2 sm:gap-3 sm:grid-cols-2">
+            <div className=" flex  justify-center">
+              <h2 className="mb-2 text-sm font-semibold text-gray-900 uppercase dark:text-white flex gap-3 items-center">
+              <FaPhone/>
+
+                <span>(+51)942394323</span>
+              </h2>
+              
+            </div>
+            <div className="flex justify-center">
+            <h2 className="mb-2 text-sm font-semibold text-gray-900  dark:text-white flex gap-3 items-center">
+              <FaMailBulk/>
+
+                <span> aceroscomax@gmail.com</span>
+              </h2>
+             
+            </div>
+            <div className="col-span-1 sm:col-span-2 flex flex-1 justify-center"> 
+            <h2 className="mb-6 text-sm font-semibold text-gray-900  dark:text-white flex gap-3 items-center">
+              <FaMapMarker/>
+
+                <span> aceroscomax@gmail.com</span>
+              </h2>
+             
+             
+            </div>
           </div>
-          <div>
-            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase ">
-              Legal
-            </h2>
-            <ul className="text-gray-500 dark:text-gray-400 font-medium">
-              <li className="mb-4">
-                <a href="#" className="hover:underline">
-                  Privacy Policy
-                </a>
-              </li>
-              <li className="mb-4">
-                <a href="#" className="hover:underline">
-                  Licensing
-                </a>
-              </li>
-              <li className="mb-4">
-                <a href="#" className="hover:underline">
-                  Terms &amp; Conditions
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase ">
-              Download
-            </h2>
-            <ul className="text-gray-500 dark:text-gray-400 font-medium">
-              <li className="mb-4">
-                <a href="#" className="hover:underline">
-                  iOS
-                </a>
-              </li>
-              <li className="mb-4">
-                <a href="#" className="hover:underline">
-                  Android
-                </a>
-              </li>
-              <li className="mb-4">
-                <a href="#" className="hover:underline">
-                  Windows
-                </a>
-              </li>
-              <li className="mb-4">
-                <a href="#" className="hover:underline">
-                  MacOS
-                </a>
-              </li>
-            </ul>
+          <div className="hidden md:block">
+            <div className=" items-center">
+              
+              <h2 className="mb-6 text-start text-sm font-semibold text-gray-900 uppercase dark:text-white">
+                Atajos
+              </h2>
+              <ul className="text-gray-600 dark:text-gray-400 font-medium">
+                <li className="mb-4">
+                  <Link to={"/categorias/vigas"}  className="hover:underline">
+                    Categorias
+                  </Link>
+                </li>
+                <li>
+                  <a href="#" className="hover:underline">
+                    Terminos  &amp; Condiciones
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div className="px-4 py-6 bg-gray-100 shadow-lg rounded-t-xl  md:flex md:items-center md:justify-between">
-          <div className="flex justify-start gap-4 items-center">
-            <span className="font-bold text-base text-gray-700 ">
-              Aceros Comex
-            </span>
-            <span className="text-sm text-gray-500  sm:text-center">
-              © 2023 <a href="">Aceros Comex™</a>. Todos los derechos
-              reservados.
-            </span>
-          </div>
-
-          <div className="flex mt-4 space-x-6 sm:justify-center md:mt-0">
-            <a href="#" className="text-gray-400 hover:text-gray-900 ">
+        <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        <div className="sm:flex sm:items-center sm:justify-between">
+          <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+            © 2023{" "}
+            <Link to="/" className="hover:underline">
+              Aceros Comax™
+            </Link>{" "}
+            Todos los derechos reservados.
+          </span>
+          <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
+            <a
+              href="#"
+              className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+            >
               <svg
                 className="w-5 h-5"
                 fill="currentColor"
@@ -136,7 +90,10 @@ const Footer = () => {
               </svg>
               <span className="sr-only">Facebook page</span>
             </a>
-            <a href="#" className="text-gray-400 hover:text-gray-900 ">
+            <a
+              href="#"
+              className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+            >
               <svg
                 className="w-5 h-5"
                 fill="currentColor"
@@ -151,7 +108,10 @@ const Footer = () => {
               </svg>
               <span className="sr-only">Instagram page</span>
             </a>
-            <a href="#" className="text-gray-400 hover:text-gray-900 ">
+            <a
+              href="#"
+              className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+            >
               <svg
                 className="w-5 h-5"
                 fill="currentColor"
@@ -162,7 +122,10 @@ const Footer = () => {
               </svg>
               <span className="sr-only">Twitter page</span>
             </a>
-            <a href="#" className="text-gray-400 hover:text-gray-900 ">
+            <a
+              href="#"
+              className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+            >
               <svg
                 className="w-5 h-5"
                 fill="currentColor"
@@ -177,7 +140,10 @@ const Footer = () => {
               </svg>
               <span className="sr-only">GitHub account</span>
             </a>
-            <a href="#" className="text-gray-400 hover:text-gray-900 ">
+            <a
+              href="#"
+              className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+            >
               <svg
                 className="w-5 h-5"
                 fill="currentColor"

@@ -19,18 +19,21 @@ const CardProduct = ({ e }) => {
     <div className=" p-3 rounded-lg bg-white dark:bg-gray-800">
       <div className="relative ">
       <img
-      onMouseEnter={()=>setIsDescriptionActive(true)} onMouseLeave={()=>setIsDescriptionActive(false)}
+      onMouseEnter={()=>setIsDescriptionActive(true)} 
         src={e.images[0].url}
         alt={e.images[0].alt}
         className="w-full  object-cover h-60 rounded-md"
       />
        {isDescriptionActive && (
-              <div className="absolute shadow-xl mt-4   top-full w-full bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 mb-8 rounded-md p-4">
+              <div   onMouseLeave={()=>setIsDescriptionActive(false)} className="absolute shadow-xl  flex items-center h-full  z-50 left-1/2  transform -translate-x-1/2 top-1/2 -translate-y-1/2 w-full text-white  mb-8 rounded-md p-4">
               {e.descripcion}
   
             </div>
 
           )}
+          <div className={`${isDescriptionActive ?" bg-black absolute top-0 w-full h-full bg-opacity-70 z-40" :"bg-transparent" } rounded-md` }>
+
+          </div>
 
       </div>
    
