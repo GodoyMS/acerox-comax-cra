@@ -196,7 +196,7 @@ export const productos = [
     images: [
       {
         id: 1,
-        url: "/assets/images/tubos/tuboSchedule.png",
+        url: "/assets/images/tubos/tuboSchedule.jpg",
         alt: "Tubo Schedule",
       },
     ],
