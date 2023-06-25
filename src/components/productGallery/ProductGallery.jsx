@@ -12,7 +12,7 @@ const ProductGallery = ({product,id,setCurrentPhotoId,currentPhotoId}) => {
   return (
     <div className='flex w-full flex-col gap-2'>
       <div>
-        {currentPhotoId &&         <img alt='producto' width={900} height={700} className='w-full h-full object-cover' src={currentPhotoId}/>
+        {currentPhotoId &&         <img alt='producto' width={900} height={700} className='w-full h-full object-cover rounded-md' src={currentPhotoId}/>
 }
       </div>
       

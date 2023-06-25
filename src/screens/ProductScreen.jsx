@@ -81,7 +81,7 @@ const ProductScreen = () => {
                   alt="producto"
                   width={300}
                   height={300}
-                  className="w-20 h-20 object-cover"
+                  className="w-20 h-20 object-cover rounded-md"
                   key={img.id}
                   src={img.url}
                 />
