@@ -11,7 +11,7 @@ const ProductGallery = ({product,id,setCurrentPhotoId,currentPhotoId}) => {
     console.log(currentPhotoId)
   return (
     <div className='flex w-full h-full flex-1 flex-col gap-2 '>
-      <div className='aspect-video h-full'>
+      <div className='aspect-video  h-96'>
         {currentPhotoId &&         <img alt='producto' width={900} height={700} className='w-full h-full object-cover rounded-md' src={currentPhotoId}/>
 }
       </div>
