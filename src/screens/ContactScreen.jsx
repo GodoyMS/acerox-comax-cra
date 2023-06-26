@@ -94,9 +94,7 @@ const ContactScreen = () => {
       .catch((error) => {
         console.log(error.text);
       })
-      .finally(() => {
-        resetValues();
-      })
+   
   };
 
   const resetValues = () => {
