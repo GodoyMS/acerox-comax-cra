@@ -37,7 +37,7 @@ const Slide1=()=>{
 
           <div class="flex z-50 justify-center items-center max-w-5xl mx-auto">
             <Link
-              to={"/productos"}
+              to={"/categorias/vigas"}
               class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-700 bg-primary transition duration-150 ease-in-out hover:bg-primaryhover lg:text-xl lg:font-bold  rounded text-white px-4 sm:px-10 border border-primary py-2 sm:py-4 text-sm"
             >
               Ver productos
@@ -82,7 +82,7 @@ const Slide2=()=>{
 
           <div class="flex z-50 justify-center items-center max-w-5xl mx-auto">
             <Link
-              to={"/productos"}
+              to={"/categorias/vigas"}
               class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-700 bg-secondary transition duration-150 ease-in-out hover:bg-secondaryhover lg:text-xl lg:font-bold  rounded text-white px-4 sm:px-10 border border-secondary py-2 sm:py-4 text-sm"
             >
               Ver productos
@@ -130,7 +130,7 @@ const Slide3=()=>{
 
           <div class="flex z-50 justify-center items-center max-w-5xl mx-auto">
             <Link
-              to={"/productos"}
+              to={"/categorias/vigas"}
               class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-700 bg-tertiary transition duration-150 ease-in-out hover:bg-tertiaryhover lg:text-xl lg:font-bold  rounded text-white px-4 sm:px-10 border border-tertiary py-2 sm:py-4 text-sm"
             >
               Ver productos
