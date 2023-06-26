@@ -14,12 +14,14 @@ const ProductScreen = () => {
   const [currentCategory, setCurrentCategory] = useState(null);
 
   const currentProduct = productos.find((obj) => obj.id === Number(id));
-  useEffect(()=>{
-      setCurrentCategory(categories.find((obj)=>obj.route === currentProduct.route).route)
-  },[id])
-  
+  useEffect(() => {
+    setCurrentCategory(
+      categories.find((obj) => obj.route === currentProduct.route).route
+    );
+  }, [id]);
+
   console.log(currentProduct);
-  console.log(currentCategory)
+  console.log(currentCategory);
   return (
     <main className="max-w-7xl  w-full mx-auto pt-10 pb-20">
       {currentCategory && currentProduct && (
@@ -69,36 +71,38 @@ const ProductScreen = () => {
             product={currentProduct}
           />
         </div>
-        <div className="md:col-span-12 grid grid-cols-12 gap-10 items-center ">
-          <div className="  md:col-span-5 order-2  md:order-none ">
-            <a
-              href="/pdf/CATALOGO ACEROS COMEX SAC.pdf"
-              target="_blank"
-              className="flex justify-center gap-6 items-center hover:bg-transparent hover:border-gray-800 dark:hover:border dark:hover:border-200 dark:hover:bg-gray-100  dark:hover:bg-transparent dark:hover:border-gray-200 hover:text-gray-800 hover:border transition duration-300 bg-gray-300 dark:bg-gray-600 dark:text-gray-100 px-4 rounded-md  py-3 font-bold "
-            >
-              <span>Descargar Ficha Técnica</span>
-              <HiDocumentText className="w-6 h-6" />
-            </a>
-          </div>
-          <div className="flex justify-end gap-4 items-center md:col-span-7 order-1 md:order-none">
-            {currentProduct.images.map((img) => (
-              <button key={img.id} onClick={() => setCurrentPhotoId(img.url)}>
-                <img
-                  alt="producto"
-                  width={300}
-                  height={300}
-                  className="w-20 h-20 object-cover rounded-md"
-                  key={img.id}
-                  src={img.url}
-                />
-              </button>
-            ))}
+        <div className="md:col-span-12  ">
+          <div className=" flex flex-col  md:grid grid-cols-12 gap-10 items-center">
+            <div className=" md:col-span-5 order-2  md:order-none ">
+              <a
+                href="/pdf/CATALOGO ACEROS COMEX SAC.pdf"
+                target="_blank"
+                className="flex justify-center gap-6 items-center hover:bg-transparent hover:border-gray-800 dark:hover:border dark:hover:border-200 dark:hover:bg-gray-100  dark:hover:bg-transparent dark:hover:border-gray-200 hover:text-gray-800 hover:border transition duration-300 bg-gray-300 dark:bg-gray-600 dark:text-gray-100 px-4 rounded-md  py-3 font-bold "
+              >
+                <span>Descargar Ficha Técnica</span>
+                <HiDocumentText className="w-6 h-6" />
+              </a>
+            </div>
+            <div className="flex justify-end gap-4 items-center md:col-span-7 order-1 md:order-none">
+              {currentProduct.images.map((img) => (
+                <button key={img.id} onClick={() => setCurrentPhotoId(img.url)}>
+                  <img
+                    alt="producto"
+                    width={300}
+                    height={300}
+                    className="w-20 h-20 object-cover rounded-md"
+                    key={img.id}
+                    src={img.url}
+                  />
+                </button>
+              ))}
+            </div>
           </div>
         </div>
 
         <div className="md:col-span-12">
           <div className="flex  w-full justify-center flex-wrap gap-6">
-          {currentProduct.usos && (
+            {currentProduct.usos && (
               <div
                 style={{ minWidth: "250px" }}
                 className="flex-col flex w-full gap-4 flex-1 text-justify bg-gray-300 dark:bg-gray-700 p-3 rounded-md"
@@ -124,8 +128,8 @@ const ProductScreen = () => {
                 </p>
               </div>
             )}
-            
-             {currentProduct.normaTecnica && (
+
+            {currentProduct.normaTecnica && (
               <div
                 style={{ minWidth: "250px" }}
                 className="flex flex-col flex-1 gap-4  text-justify bg-gray-300 dark:bg-gray-700 p-3 rounded-md"
