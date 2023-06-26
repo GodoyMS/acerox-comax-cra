@@ -1,12 +1,16 @@
 import { categories } from "@data/categorias";
 import { productos } from "@data/products";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-const BreadCrumbSingleProduct = ({ categoria,producto }) => {
+const BreadCrumbSingleProduct = ({ categoria,producto,id }) => {
   const [isActive, setIsActive] = useState(false);
   const [isProductsActive, setIsProductsActive] = useState(false);
-  console.log(producto)
+  const[currentCategory,setCurrentCategory]=useState(null)
+  useEffect(()=>{
+    setCurrentCategory(categoria)
+  },[id,producto])
+  console.log(currentCategory)
   return (
     <nav id="123" className="flex justify-between  px-4">
       <ol className="inline-flex items-center mb-3 sm:mb-0">
@@ -26,7 +30,7 @@ const BreadCrumbSingleProduct = ({ categoria,producto }) => {
               >
                 <path d="M80 104c13.3 0 24-10.7 24-24s-10.7-24-24-24S56 66.7 56 80s10.7 24 24 24zm80-24c0 32.8-19.7 61-48 73.3v87.8c18.8-10.9 40.7-17.1 64-17.1h96c35.3 0 64-28.7 64-64v-6.7C307.7 141 288 112.8 288 80c0-44.2 35.8-80 80-80s80 35.8 80 80c0 32.8-19.7 61-48 73.3V160c0 70.7-57.3 128-128 128H176c-35.3 0-64 28.7-64 64v6.7c28.3 12.3 48 40.5 48 73.3c0 44.2-35.8 80-80 80s-80-35.8-80-80c0-32.8 19.7-61 48-73.3V352 153.3C19.7 141 0 112.8 0 80C0 35.8 35.8 0 80 0s80 35.8 80 80zm232 0c0-13.3-10.7-24-24-24s-24 10.7-24 24s10.7 24 24 24s24-10.7 24-24zM80 456c13.3 0 24-10.7 24-24s-10.7-24-24-24s-24 10.7-24 24s10.7 24 24 24z" />
               </svg>
-              {categories.find((obj) => obj.route === categoria).name}
+               {currentCategory && categories.find((obj) => obj.route === currentCategory).name}
               <svg
                 className="w-5 h-5 ml-1"
                 aria-hidden="true"
@@ -99,7 +103,7 @@ const BreadCrumbSingleProduct = ({ categoria,producto }) => {
             {isProductsActive && (
               <div className="z-10 absolute top-full bg-white divide-y divide-gray-100 rounded-lg shadow w-auto dark:bg-gray-700">
                 <ul className="py-2 text-sm text-gray-700 dark:text-gray-200">
-                  {productos.filter(obj=>obj.route === categoria).map((e) => (
+                  { currentCategory && productos.filter(obj=>obj.route === currentCategory).map((e) => (
                     <li key={e.id}>
                       
                       <Link

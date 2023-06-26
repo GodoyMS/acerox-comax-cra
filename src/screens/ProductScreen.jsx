@@ -2,25 +2,31 @@ import BreadCrumbSingleProduct from "@components/breadCrumb/BreadCrumbSingleProd
 import CotizarProductoBotones from "@components/cotizarProductoBotones/CotizarProductoBotones";
 import ProductGallery from "@components/productGallery/ProductGallery";
 import { productos } from "@data/products";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 import { HiDocumentText } from "react-icons/hi";
+import { categories } from "@data/categorias";
 
 const ProductScreen = () => {
   const { id } = useParams();
   const [currentPhotoId, setCurrentPhotoId] = useState(null);
+  const [currentCategory, setCurrentCategory] = useState(null);
 
   const currentProduct = productos.find((obj) => obj.id === Number(id));
-
+  useEffect(()=>{
+      setCurrentCategory(categories.find((obj)=>obj.route === currentProduct.route).route)
+  },[id])
+  
   console.log(currentProduct);
-
+  console.log(currentCategory)
   return (
     <main className="max-w-7xl  w-full mx-auto pt-10 pb-20">
-      {currentProduct && (
+      {currentCategory && currentProduct && (
         <BreadCrumbSingleProduct
-          categoria={"planchas"}
+          categoria={currentCategory}
           producto={currentProduct}
+          id={id}
         />
       )}
 
